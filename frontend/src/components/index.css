@@ -1,1 +1,24 @@
 
+:root {
+  --bg: #fff;
+  --fg: #000;
+}
+*{ box-sizing:border-box; }
+html,body,#root{ height:100%; margin:0; font-family:Inter,system-ui,Arial,Helvetica; background:var(--bg); color:var(--fg); }
+.app{ max-width:900px; margin:28px auto; border:2px solid #000; border-radius:12px; background:#fff; overflow:hidden; }
+.header{ display:flex; gap:12px; align-items:center; padding:12px; border-bottom:1px solid #ddd; background:#f9f9f9; }
+.logo{ height:52px; width:52px; object-fit:contain; filter:grayscale(100%); }
+.title{ font-size:20px; font-weight:800; letter-spacing:0.5px; }
+.mode-badge{ margin-left:auto; font-size:12px; padding:6px 8px; border-radius:6px; border:1px solid #000; background:#fff; }
+
+.chat-area{ padding:12px; }
+.messages{ min-height:320px; max-height:60vh; overflow:auto; display:flex; flex-direction:column; gap:8px; padding-bottom:8px; }
+.message{ padding:10px 14px; border-radius:10px; max-width:80%; line-height:1.35; }
+.user{ align-self:flex-end; background:#000; color:#fff; }
+.ai{ align-self:flex-start; background:#fff; color:#000; border:1px solid #000; }
+
+.controls{ display:flex; gap:8px; padding-top:8px; border-top:1px solid #eee; margin-top:12px; }
+.input{ flex:1; padding:10px 12px; border-radius:8px; border:1px solid #bbb; outline:none; }
+.input:focus{ box-shadow:0 0 0 3px rgba(0,0,0,0.06); }
+.btn{ padding:10px 14px; border-radius:8px; border:1px solid #000; background:#fff; cursor:pointer; }
+.btn:disabled{ opacity:0.6; cursor:default; }
